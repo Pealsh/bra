@@ -1,0 +1,302 @@
+/* ベース設定 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; /* スムーズスクロールを有効化 */
+}
+
+body {
+  font-family: "poppins", sans-serif;
+  color: #FFFFFF;
+  line-height: 1.6;
+  background-color: #000;
+}
+/* リンクのスタイル */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
+
+/* ヘッダー */
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 20px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-icon {
+  width: 80px; 
+  height: auto;
+}
+
+.nav-menu ul {
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-menu ul li a {
+  color: #FFFFFF;
+  padding: 8px 0;
+  transition: color 0.3s ease;
+}
+.nav-menu ul li a:hover {
+  color: #ccc;
+}
+
+/* ハンバーガーメニュー (スマホ用) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  width: 28px;
+  cursor: pointer;
+}
+.hamburger span {
+  height: 3px;
+  background: #fff;
+  margin-bottom: 5px;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+/* ヒーローセクション */
+#hero {
+  height: 100vh;
+  background: url("https://source.unsplash.com/1600x900/?bar,night") center/cover
+    no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.hero-content {
+  text-align: center;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 40px;
+  border-radius: 5px;
+}
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  
+}
+.hero-content h1 span {
+  font-family: "Zen Old Mincho", serif;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: -.09em;
+}
+.special-font{
+  position: relative;
+  top: -4px; 
+  font-size: 1.5rem;
+  font-family: "Zen Old Mincho", serif;
+  font-weight: 700;
+  font-style: normal;
+  
+}
+.hero-content p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+.btn-cta {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #FFFFFF;
+  color: #000;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+.btn-cta:hover {
+  background-color: #cccccc;
+}
+
+/* セクション全般 */
+.section-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  text-align: center;
+}
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+section h2::after {
+  content: "";
+  display: block;
+  width: 60px; /* 通常時のバーの幅 */
+  height: 2px;
+  background: #fff;
+  margin: 10px auto 0;
+  transition: width 0.3s ease; /* スムーズな伸縮を設定 */
+}
+
+section h2:hover::after {
+  width: 100px; /* ホバー時にバーを少し伸ばす */
+}
+
+
+/* place セクション */
+#Place p {
+  line-height: 1.7;
+  font-size: 1rem;
+  margin: 0 auto;
+  max-width: 800px;
+  bottom: 5px;
+}
+
+.map-container {
+  width: 100%;
+  max-width: 800px; /* 必要に応じて調整 */
+  height: 400px;    /* マップの高さ */
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+iframe {
+  width: 100%;
+  max-width: 800px; /* 地図の最大幅を設定 */
+  height: 450px;
+  border: 0;
+}
+
+
+/* Menu セクション */
+
+/* Contact セクション */
+.contact-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-form {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid ;
+  border-radius: 4px;
+}
+
+.instagram-link {
+  display: inline-block;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.instagram-icon {
+  width: 50px; /* アイコンの幅 */
+  height: 50px; /* アイコンの高さ */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.instagram-icon:hover {
+  transform: scale(1.2); /* ホバー時に拡大 */
+}
+
+/* TELリンクのホバー効果 */
+a[href^="tel"] {
+  display: inline-block;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 1.2rem;
+}
+
+a[href^="tel"]:hover {
+  color: #ccc;
+}
+
+/* フッター */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #000;
+  color: #fff;
+}
+footer p span{
+  font-size: 0.9rem;
+  font-family: "Zen Old Mincho", serif;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: -0.09em;
+}
+.special-fontt{
+  position: relative;
+  top: -2px; 
+  font-size: 0.5rem;
+  font-family: "Zen Old Mincho", serif;
+  font-weight: 700;
+  font-style: normal;
+  
+}
+
+/* レスポンシブ対応 */
+@media screen and (max-width: 768px) {
+  .nav-menu ul {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 5px;
+    padding: 20px;
+  }
+  .nav-menu ul.active {
+    display: flex;
+  }
+  .hamburger {
+    display: flex;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+}
